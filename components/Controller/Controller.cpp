@@ -8,6 +8,7 @@ Controller::Controller(){
 void Controller::begin(){
     this->test1 = 0;
     this->old_state = INITIAL;
+    this->new_state = INITIAL;
     this->main_task_handle = NULL;
     printf("Start the task1 \n");
     this->State_change_handle(TASK2);
