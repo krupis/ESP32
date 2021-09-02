@@ -10,7 +10,7 @@ void Controller::begin(){
     this->old_state = INITIAL;
     this->main_task_handle = NULL;
     printf("Start the task1 \n");
-    this->State_change_handle(MODE2);
+    this->State_change_handle(TASK2);
 }
 
 void Controller::State_change_handle(e_thermostat_state state)
@@ -21,6 +21,7 @@ void Controller::State_change_handle(e_thermostat_state state)
         if (this ->main_task_handle != NULL){
             vTaskDelete(this ->main_task_handle);
         }
+        printf("PROGRAM STUCK \n");
     }
     else
     {
@@ -30,15 +31,15 @@ void Controller::State_change_handle(e_thermostat_state state)
         
     switch(this->new_state) 
     {   
-        case MODE1:
+        case TASK1:
             printf("NEW STATE = MODE1 \n");
-            this-> old_state = MODE1;
+            this-> old_state = TASK1;
             xTaskCreate(task1,"MODE1",10000,this,1,&this->main_task_handle); // receiving commands from main uart
             break;
 
-        case MODE2:
+        case TASK2:
             printf("NEW STATE = MODE2\n");
-            this-> old_state = MODE2;
+            this-> old_state = TASK2;
             xTaskCreate(task2,"MODE2",10000,this,1,&this->main_task_handle); // receiving commands from main uart
             break;
 

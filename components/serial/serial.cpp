@@ -8,20 +8,20 @@ bool ParseSystemCmd(char *line, uint16_t cmd_size)
 if (!strcmp("task1", line))
 	{
 		printf("task1 selected\r\n");
-		controller.State_change_handle(MODE1);
+		controller.State_change_handle(TASK1);
 		return true;
 	}
 	if (!strcmp("task2", line))
 	{
 		printf("task2 selected\r\n");
-		controller.State_change_handle(MODE2);
+		controller.State_change_handle(TASK2);
 		return true;
 	}
 
 	if (!strcmp("task3", line))
 	{
 		printf("task3 selected\r\n");
-		controller.State_change_handle(MODE3);
+		controller.State_change_handle(TASK3);
 		return true;
 	}
 

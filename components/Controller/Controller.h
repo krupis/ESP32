@@ -11,9 +11,9 @@
 enum e_thermostat_state
 {
     INITIAL,
-    MODE1,
-    MODE2,
-	MODE3,
+    TASK1,
+    TASK2,
+	TASK3,
     MAX_STATES
 };
 
@@ -59,7 +59,7 @@ class Controller
                 vTaskDelay(1000/portTICK_RATE_MS);
                 if(controller->test1 >= 10){
                     controller->test1 = 0;
-                    controller->State_change_handle(MODE1);
+                    controller->State_change_handle(TASK1);
                 }
             }
         }
