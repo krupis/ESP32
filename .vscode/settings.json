@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "esp_system.h": "c",
+        "esp_spi_flash.h": "c",
+        "esp_wifi.h": "c",
+        "ble_custom.h": "c",
+        "sdkconfig.h": "c",
+        "esp_gatt_common_api.h": "c",
+        "task.h": "c",
+        "freertos.h": "c",
+        "ledc.h": "c",
+        "*.tcc": "cpp",
+        "cstdio": "cpp",
+        "string_view": "cpp",
+        "functional": "cpp",
+        "*.ipp": "cpp",
+        "modemprotocol.h": "c",
+        "systemprotocol.h": "c",
+        "cstring": "c",
+        "typeinfo": "c",
+        "stdio.h": "c"
+    },
+    "stm32-for-vscode.openOCDPath": false,
+    "stm32-for-vscode.makePath": false,
+    "stm32-for-vscode.armToolchainPath": false
+}
